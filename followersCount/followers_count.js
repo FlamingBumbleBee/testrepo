@@ -17,6 +17,12 @@ function decreaseCount() {
     displayCount();
 }
 
+function resetCount() {
+    count = 0;
+    displayCount();
+    alert("Your follower count has been reset.")
+}
+
 function checkCountValue() {
     if (count === 10) {
         alert("Your post gained 10 followers!")
