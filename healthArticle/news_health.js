@@ -6,8 +6,8 @@ var url = './health_article.json';
 xhr.open('GET', url, true);
 xhr.responseType = 'json';
 
-//nxhr.open('GET', nurl, true);
-//nxhr.responseType = 'json';
+nxhr.open('GET', nurl, true);
+nxhr.responseType = 'json';
 
 xhr.onload = function() {
     var articles = xhr.response.articles;
@@ -55,42 +55,43 @@ xhr.onload = function() {
 
 };
 
-//nxhr.onload = function() {
-//    var newsarticles = nxhr.response.newsarticles;
-//    var newsarticlesDiv = document.getElementById('newsarticles');
+nxhr.onload = function() {
+    var newsarticles = nxhr.response.newsarticles;
+    console.log(newsarticles);
+    var newsarticlesDiv = document.getElementById('newsarticles');
 
-//    newsarticles.forEach(function(narticle) {
-//        var newsarticleDiv = document.createElement('div');
-//        newsarticleDiv.classList.add('narticle');
+    newsarticles.forEach(function(narticle) {
+        var newsarticleDiv = document.createElement('div');
+        newsarticleDiv.classList.add('narticle');
   
-//        var title = document.createElement('h2');
-//        title.textContent = narticle.title;
+        var title = document.createElement('h2');
+        title.textContent = narticle.title;
   
-//        var description = document.createElement('p');
-//        description.textContent = narticle.description;
+        var description = document.createElement('p');
+        description.textContent = narticle.description;
   
-//        var thesis = document.createElement('p');
-//        thesis.textContent = narticle.thesis;
+        var thesis = document.createElement('p');
+        thesis.textContent = narticle.thesis;
   
-//        var detailsHeader = document.createElement('h3');
-//        detailsHeader.textContent = narticle.details;
+        var detailsHeader = document.createElement('h3');
+        detailsHeader.textContent = narticle.details;
   
-//        var detailsList = document.createElement('ul');
-//        narticle.details.forEach(function(details) {
-//          var dlistItem = document.createElement('li');
-//          dlistItem.textContent = details;
-//          detailsList.appendChild(dlistItem);
-//        });
+        var detailsList = document.createElement('ul');
+        narticle.details.forEach(function(details) {
+          var dlistItem = document.createElement('li');
+          dlistItem.textContent = details;
+          detailsList.appendChild(dlistItem);
+        });
   
-//        newsarticleDiv.appendChild(title);
-//       newsarticleDiv.appendChild(description);
-//        newsarticleDiv.appendChild(thesis);
-//        newsarticleDiv.appendChild(detailsHeader);
-//        newsarticleDiv.appendChild(detailsList);
+        newsarticleDiv.appendChild(title);
+       newsarticleDiv.appendChild(description);
+        newsarticleDiv.appendChild(thesis);
+        newsarticleDiv.appendChild(detailsHeader);
+        newsarticleDiv.appendChild(detailsList);
   
-//        newsarticlesDiv.appendChild(newsarticleDiv);
-//    });
-//};
+        newsarticlesDiv.appendChild(newsarticleDiv);
+    });
+};
 
 xhr.send();
-//nxhr.send();
+nxhr.send();
