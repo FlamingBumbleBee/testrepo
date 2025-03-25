@@ -1,0 +1,27 @@
+{
+    "articles": [
+      {
+        "title": "Florida man.....",
+        "description": "Discusses what happened to the florida man",
+        "thesis": "Florida man did a bad thing",
+        "details": [
+          "made a bad choice",
+          "followed up with another bad choice",
+          "was caught by someone",
+          "there was a funny ending"
+        ]
+      },
+      {
+        "title": "Ohio man.....",
+        "description": "Discusses what happened to the ohio man",
+        "thesis": "Ohio man did a bad thing",
+        "details": [
+          "made a bad choice",
+          "followed up with another bad choice",
+          "was caught by someone",
+          "lost all his rizz"
+        ]
+      }
+    ]
+  }
+  
